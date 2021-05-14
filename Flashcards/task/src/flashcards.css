@@ -1,0 +1,64 @@
+body{
+    background-image: url("world.png");
+    background-size: cover;
+    font-family: 'Lobster', cursive;
+}
+
+.quiz_area{
+}
+
+.quiz_area__title{
+    color: #224;
+    text-align: center;
+}
+
+.quiz_area__cards{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 70vmin;
+    height: 70vmin;
+}
+
+.cards__card{
+    height: 30%;
+    flex: 0 0 30%;
+    margin: 3px;
+    padding: 5px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    border-radius: 20px;
+    transform: rotateX(0deg);
+}
+
+.front{
+    color: #e39028;
+    background-color: #e7c2e2;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back{
+    color: #e76149;
+    background-color: #75ddd1;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.cards__card:hover{
+    transform: rotateY(180deg);
+}
